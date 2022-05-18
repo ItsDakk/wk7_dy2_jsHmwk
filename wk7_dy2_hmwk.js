@@ -5,17 +5,17 @@
  "Matched dog_name" if name is in the string, if no matches are present console.log "No Matches"
 */
 
-function findWords(){
-    let dog_string = "Hello Max, my name is Dog, and I have purple eyes!";
-    if (dog_string.includes("Max","HAS","PuRple","dog")) {
-        return "Matched";
-    } else {
-        return "No Matches"
-    };
+// function findWords(){
+//     let dog_string = "Hello Max, my name is Dog, and I have purple eyes!";
+//     if (dog_string.includes("Max","HAS","PuRple","dog")) {
+//         return "Matched";
+//     } else {
+//         return "No Matches"
+//     };
         
 
-};
-console.log(findWords())
+// };
+// console.log(findWords())
 
 //Call method here with parameters
 
@@ -26,8 +26,12 @@ and replaces it with the string "even index" */
 const arr = ["Max","Baseball","Reboot","Goku","Trucks","Rodger"]
 
 function replaceEvens(arr){
-    arr.splice(0,1, "even index")
-    return arr
+    for (let i = 0; i < arr.length; i+=2) {
+        if (arr[i] !== 'even index') {
+            arr[i] = 'even index'
+        }; 
+    }
+        return arr
  };
 
 console.log(replaceEvens(arr))
